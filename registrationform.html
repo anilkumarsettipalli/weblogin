@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    
+</head>
+<body style="border:solid red 5px;border-radius: 1%;padding:5%;padding-right: 20cm;">
+    <h1> Registration form</h1>
+    <form name="form1" action="" method="post" >
+        
+       
+        user id:<input type="text" name="email" required><br></br>    
+         PASSWORD&nbsp;&nbsp;&nbsp;:<input type="password" name="pass1"></br></br>
+         NAME:&nbsp;<input type="text" name="name"  autofocus pattern="[a-zA-Z .]" ><br></br>
+         Address:<input type="text">
+         <select><option>please select a country</option>
+        <option>india</option>
+        <option>america</option>
+        <option>russia</option>
+         </select>
+         ZIP CODE:<input type="text" name="mobile1" maxlength="10" size="10" pattern="[0-9]"><br></br>
+         Email:<input type="text" name="email" required><br></br> 
+         sex:<input type="radio" name="text" value="male" required>male
+         <input type="radio" name="text" value="male" required>female<br><br>
+         language:<input type="checkbox" name="text" value="male" required>english
+         <input type="checkbox" name="text" value="male" required>non-english<br><br>
+         About:<textarea></textarea><br><br>
+        NUMBER:<input type="text" name="mobile1" maxlength="10" size="10" pattern="[0-9]"><br></br>
+        
+         <input type="submit" value="submit" onclick="return main()" > 
+          
+          
+         
+    </form>
+    <script>
+        function  password(){
+          let x=document.form1.pass1.value;
+          
+          if(x.length<7 || x.length>12 ){
+              alert("password must contain 7 t0 12 characters");
+              return false;
+          }
+          
+        }
+        function name1(){
+            let n=document.form1.name.value;
+            if(n.length<5 || n.length>12){
+                alert("pls enter valid name");
+                return false;
+            }
+        }
+        function mail(){
+          let m=document.form1.email.value;
+         
+          if(m.length<5||m.length>12){
+                   alert("pls enter valid mail");
+                   return false;
+          }
+        }
+       
+        
+       
+        
+        
+        function main(){
+            name1();
+            mail();
+        return  password();
+           
+        
+         
+        }
+  </script>
+</body>
+</html>
